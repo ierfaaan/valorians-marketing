@@ -38,7 +38,6 @@ export const Text: FunctionComponent<TextPropsType> = ({
 }) => {
   return (
     <>
-      <div className="font-inherit"></div>
       <p
         className={text({ class: className, fontSize, fontWeight })}
         {...props}
