@@ -8,7 +8,16 @@ const config: Config = withTV({
       sm: "16px",
       md: "32px",
       lg: "38px",
-      "3xl": "80px",
+      xl: "40px",
+      "2xl": "48px",
+      "3xl": "56px",
+      "6xl": "64px",
+      "7xl": "72px",
+      "8xl": "96px",
+      "9xl": "128px",
+    },
+    backgroundImage: {
+      "bg-image": "url('/bg.png')",
     },
 
     colors: {
