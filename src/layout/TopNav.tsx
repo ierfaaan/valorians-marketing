@@ -26,11 +26,11 @@ export const TopNav: FunctionComponent<TopNavPropsType> = () => {
     <nav>
       <div className="md:flex items-center justify-between p-4 relative">
         <button
-          className="md:hidden p-2 focus:outline-none absolute top-4 left-4 z-50"
+          className="md:hidden p-2 focus:outline-none absolute top-8 left-8 z-50 md:top-4 md:left-4"
           onClick={toggleMenu}
         >
           {isOpen ? (
-            <FaTimes className="w-6 h-6 text-brand-primary-normalHover absolute top-4 left-4 z-50" />
+            <FaTimes className="w-8 h-8 text-brand-primary-normalHover absolute top-4 left-4 z-50" />
           ) : (
             <FaBars className="w-6 h-6  text-brand-text-base" />
           )}
@@ -45,7 +45,7 @@ export const TopNav: FunctionComponent<TopNavPropsType> = () => {
           />
         )}
         {isOpen ? (
-          <div className="w-full h-screen bg-brand-surface-normal bg-opacity-30 flex justify-center flex-col items-center gap-8 mb-8">
+          <div className="w-full h-screen pb-8 bg-brand-surface-normal bg-opacity-100 flex justify-center flex-col items-center gap-8 mb-8 rounded-lg">
             {" "}
             <Link href={ROUTES.HOME}>
               <Text

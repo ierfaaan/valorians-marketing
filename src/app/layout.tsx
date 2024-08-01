@@ -25,21 +25,18 @@ export default function RootLayout({
       <body
         className={`${Robot.className} h-screen font-normal bg-brand-surface-normal`}
       >
-        <div className="flex flex-col h-full p-4 md:p-8 relative overflow-hidden">
-          <div className="absolute inset-0 -z-10 w-full h-full bg-brand-surface-normal">
-            <Image
-              src={BgImage}
-              alt="bg"
-              layout="fill"
-              objectFit="cover"
-              className="w-full h-full object-cover opacity-[0.05]"
-            />
-          </div>
-          <header>
+        <div className="relative flex flex-col h-full">
+          <div className="absolute inset-0 -z-10 w-full h-full bg-[url('/bg.png')] opacity-[0.05] bg-repeat-y bg-cover bg-center "></div>
+
+          <header className="fixed top-6 left-6 right-8 z-20">
             <TopNav />
           </header>
-          <main className="flex-1">{children}</main>
-          <footer>
+
+          <main className="flex-1 mt-16 mb-16 overflow-y-auto overflow-x-hidden p-4 md:p-8">
+            {children}
+          </main>
+
+          <footer className="fixed bottom-6 left-4 right-4 z-20">
             <Footer />
           </footer>
         </div>
